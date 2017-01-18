@@ -34,200 +34,118 @@
             <add>
                 <table name="data_type">
                     <record>
-                        <name>uk_phone</name>
+                        <name>ch_phone</name>
                         <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_phone</validator>
-                        <formatter>uk_phone</formatter>
+                        <validator>ch_phone</validator>
+                        <formatter>ch_phone</formatter>
                         <unformatter>phone</unformatter>
                         <datetime_format></datetime_format>
                         <max_length>24</max_length>
                     </record>
                     <record>
-                        <name>uk_phone_home</name>
+                        <name>ch_phone_mobile</name>
                         <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_phone_home</validator>
-                        <formatter>uk_phone</formatter>
+                        <validator>ch_phone_mobilde</validator>
+                        <formatter>ch_phone</formatter>
                         <unformatter>phone</unformatter>
                         <datetime_format></datetime_format>
                         <max_length>24</max_length>
                     </record>
                     <record>
-                        <name>uk_phone_office</name>
-                        <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_phone_office</validator>
-                        <formatter>uk_phone</formatter>
-                        <unformatter>phone</unformatter>
-                        <datetime_format></datetime_format>
-                        <max_length>24</max_length>
-                    </record>
-                    <record>
-                        <name>uk_phone_mobile</name>
-                        <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_phone_mobile</validator>
-                        <formatter>uk_phone</formatter>
-                        <unformatter>phone</unformatter>
-                        <datetime_format></datetime_format>
-                        <max_length>24</max_length>
-                    </record>
-                    <record>
-                        <name>uk_phone_landline</name>
-                        <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_phone_landline</validator>
-                        <formatter>uk_phone</formatter>
-                        <unformatter>phone</unformatter>
-                        <datetime_format></datetime_format>
-                        <max_length>24</max_length>
-                    </record>
-                    <record>
-                        <name>uk_phone_premium</name>
-                        <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_phone_premium</validator>
-                        <formatter>uk_phone</formatter>
-                        <unformatter>phone</unformatter>
-                        <datetime_format></datetime_format>
-                        <max_length>24</max_length>
-                    </record>
-                    <record>
-                        <name>uk_date</name>
+                        <name>ch_date</name>
                         <based_on_data_type>date</based_on_data_type>
                         <validator>date</validator>
-                        <formatter>uk_date</formatter>
-                        <unformatter>uk_date</unformatter>
-                        <datetime_format>d/m/Y</datetime_format>
+                        <formatter>ch_date</formatter>
+                        <unformatter>ch_date</unformatter>
+                        <datetime_format>d.m.Y</datetime_format>
                         <max_length></max_length>
                     </record>
                     <record>
-                        <name>uk_time</name>
+                        <name>ch_time</name>
                         <based_on_data_type>time</based_on_data_type>
                         <validator>time</validator>
-                        <formatter>uk_time</formatter>
-                        <unformatter>uk_time</unformatter>
+                        <formatter>ch_time</formatter>
+                        <unformatter>ch_time</unformatter>
                         <datetime_format>H:i</datetime_format>
                         <max_length></max_length>
                     </record>
                     <record>
-                        <name>uk_datetime</name>
+                        <name>ch_datetime</name>
                         <based_on_data_type>datetime</based_on_data_type>
                         <validator>datetime</validator>
-                        <formatter>uk_datetime</formatter>
-                        <unformatter>uk_datetime</unformatter>
-                        <datetime_format>d/m/Y H:i</datetime_format>
+                        <formatter>ch_datetime</formatter>
+                        <unformatter>ch_datetime</unformatter>
+                        <datetime_format>d.m.Y H:i</datetime_format>
                         <max_length></max_length>
                     </record>
                     <record>
-                        <name>uk_postcode</name>
+                        <name>ch_postcode</name>
                         <based_on_data_type>varchar</based_on_data_type>
-                        <validator>uk_postcode</validator>
-                        <formatter>uk_postcode</formatter>
-                        <unformatter>uk_postcode</unformatter>
+                        <validator>ch_postcode</validator>
+                        <formatter></formatter>
+                        <unformatter></unformatter>
                         <datetime_format></datetime_format>
                         <max_length>12</max_length>
                     </record>
                 </table>
                 <table name="country">
                     <record>
-                        <name>uk</name>
-                        <label>United Kingdom</label>
-                        <date_data_type_id get-from="data_type" where-name-is="uk_date" />
-                        <time_data_type_id get-from="data_type" where-name-is="uk_time" />
-                        <datetime_data_type_id get-from="data_type" where-name-is="uk_datetime" />
-                        <currency_id get-form="currency" where-name-is="gbp" />
+                        <name>ch</name>
+                        <label>Switzerland</label>
+                        <date_data_type_id get-from="data_type" where-name-is="ch_date" />
+                        <time_data_type_id get-from="data_type" where-name-is="ch_time" />
+                        <datetime_data_type_id get-from="data_type" where-name-is="ch_datetime" />
+                        <currency_id get-form="currency" where-name-is="chf" />
                         <currency_decimal_separater>.</currency_decimal_separater>
                         <currency_thousand_separater>,</currency_thousand_separater>
                     </record>
                 </table>
                 <table name="country_phone_data_type">
                     <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <name>uk_phone_home</name>
-                        <label>Home</label>
-                        <data_type_id get-from="data_type" where-name-is="uk_phone_home" />
+                        <country_id get-from="country" where-name-is="ch" />
+                        <name>ch_phone</name>
+                        <label>Phone</label>
+                        <data_type_id get-from="data_type" where-name-is="ch_phone" />
                     </record>
                     <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <name>uk_phone_mobile</name>
+                        <country_id get-from="country" where-name-is="ch" />
+                        <name>ch_phone_mobile</name>
                         <label>Mobile</label>
-                        <data_type_id get-from="data_type" where-name-is="uk_phone_mobile" />
-                    </record>
-                    <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <name>uk_phone_office</name>
-                        <label>Work</label>
-                        <data_type_id get-from="data_type" where-name-is="uk_phone_office" />
+                        <data_type_id get-from="data_type" where-name-is="ch_phone_mobile" />
                     </record>
                 </table>
                 <table name="country_address_format">
                     <record>
-                        <country_id get-from="country" where-name-is="uk" />
+                        <country_id get-from="country" where-name-is="ch" />
                         <priority>1</priority>
-                        <name>uk_flat_details</name>
-                        <label>Flat details</label>
+                        <name>ch_street_name</name>
+                        <label>Street name</label>
                         <data_type_id get-from="data_type" where-name-is="varchar" />
-                        <max_length>16</max_length>
+                        <max_length>32</max_length>
                     </record>
                     <record>
-                        <country_id get-from="country" where-name-is="uk" />
+                        <country_id get-from="country" where-name-is="ch" />
                         <priority>2</priority>
-                        <name>uk_building_name</name>
-                        <label>House or Building Name</label>
+                        <name>ch_building_number</name>
+                        <label>Building number</label>
                         <data_type_id get-from="data_type" where-name-is="varchar" />
                         <max_length>16</max_length>
                     </record>
                     <record>
-                        <country_id get-from="country" where-name-is="uk" />
+                        <country_id get-from="country" where-name-is="ch" />
                         <priority>3</priority>
-                        <name>uk_building_number</name>
-                        <label>House or Building Number</label>
-                        <data_type_id get-from="data_type" where-name-is="varchar" />
+                        <name>ch_postcode</name>
+                        <label>Postcode</label>
+                        <data_type_id get-from="data_type" where-name-is="ch_postcode" />
                         <max_length>16</max_length>
                     </record>
                     <record>
-                        <country_id get-from="country" where-name-is="uk" />
+                        <country_id get-from="country" where-name-is="ch" />
                         <priority>4</priority>
-                        <name>uk_street</name>
-                        <label>Street</label>
+                        <name>ch_city</name>
+                        <label>City</label>
                         <data_type_id get-from="data_type" where-name-is="varchar" />
-                        <max_length>64</max_length>
-                    </record>
-                    <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <priority>5</priority>
-                        <name>uk_district</name>
-                        <label>District</label>
-                        <data_type_id get-from="data_type" where-name-is="varchar" />
-                        <max_length>64</max_length>
-                    </record>
-                    <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <priority>6</priority>
-                        <name>uk_city</name>
-                        <label>Town or City</label>
-                        <data_type_id get-from="data_type" where-name-is="varchar" />
-                        <max_length>64</max_length>
-                    </record>
-                    <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <priority>7</priority>
-                        <name>uk_county</name>
-                        <label>County</label>
-                        <data_type_id get-from="data_type" where-name-is="varchar" />
-                        <max_length>64</max_length>
-                    </record>
-                    <record>
-                        <country_id get-from="country" where-name-is="uk" />
-                        <priority>8</priority>
-                        <name>uk_postcode</name>
-                        <label>Postcode</label>
-                        <data_type_id get-from="data_type" where-name-is="uk_postcode" />
-                        <max_length>12</max_length>
-                    </record>
-                </table>
-                <table name="language">
-                    <record>
-                        <name>english_uk</name>
-                        <short_code>en</short_code>
-                        <long_code>en-uk</long_code>
-                        <label>English (UK)</label>
+                        <max_length>32</max_length>
                     </record>
                 </table>
             </add>
@@ -237,17 +155,17 @@
                 <setting>
                     <name>locales.default_date_format</name>
                     <label>Default date format</label>
-                    <default_value>uk_date</default_value>
+                    <default_value>ch_date</default_value>
                 </setting>
                 <setting>
                     <name>locales.default_time_format</name>
                     <label>Default time format</label>
-                    <default_value>uk_time</default_value>
+                    <default_value>ch_time</default_value>
                 </setting>
                 <setting>
                     <name>locales.default_datetime_format</name>
                     <label>Default date/time format</label>
-                    <default_value>uk_datetime</default_value>
+                    <default_value>ch_datetime</default_value>
                 </setting>
             </category>
         </settings>
