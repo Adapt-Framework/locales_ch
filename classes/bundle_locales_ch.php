@@ -24,7 +24,7 @@ namespace adapt\locales\ch{
                     'ch_phone', 
                     function($value){
                         return substr($value, 0, 3) . ' ' . substr($value, 3, 3) . ' ' . substr($value, 6, 2) . ' ' . substr($value, 8, 2);
-                    }.
+                    },
                     "function(value){
                         return value.substr(0, 3) + ' ' + value.substr(3, 3) + ' ' + value.substr(6, 2) + ' ' + value.substr(8, 2);
                     }"
