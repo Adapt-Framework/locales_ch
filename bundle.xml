@@ -95,7 +95,7 @@
                         <date_data_type_id get-from="data_type" where-name-is="ch_date" />
                         <time_data_type_id get-from="data_type" where-name-is="ch_time" />
                         <datetime_data_type_id get-from="data_type" where-name-is="ch_datetime" />
-                        <currency_id get-form="currency" where-name-is="chf" />
+                        <currency_id get-from="currency" where-name-is="chf" />
                         <currency_decimal_separater>.</currency_decimal_separater>
                         <currency_thousand_separater>,</currency_thousand_separater>
                     </record>
