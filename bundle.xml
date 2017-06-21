@@ -4,7 +4,7 @@
         <name>locales_ch</name>
         <label>Switzerland Locality</label>
         <type>extension</type>
-        <version>1.0.0</version>
+        <version>0.8.0</version>
         <namespace>\adapt\locales\ch</namespace>
         <description>Provides locality information for the Switzerland, such as phone number, address and date formats.</description>
         <copyright>2017 Adapt Framework</copyright>
@@ -13,11 +13,11 @@
         <depends_on>
             <bundle>
                 <name>locales</name>
-                <version>1.0</version>
+                <version>0.8</version>
             </bundle>
             <bundle>
                 <name>currency_chf</name>
-                <version>1.0</version>
+                <version>0.9</version>
             </bundle>
             <bundle>
                 <name>adapt</name>
@@ -27,7 +27,7 @@
         <works_with>
             <bundle>
                 <name>locales</name>
-                <version>1.0</version>
+                <version>0.8</version>
             </bundle>
         </works_with>
         <schema>
